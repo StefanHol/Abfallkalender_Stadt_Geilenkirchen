@@ -1,11 +1,19 @@
 # Abfallkalender für die Stadt Geilenkirchen
 
-Da die Stadt Geilenkirchen im Kreis Heinsberg leider keine ICS Kalenderdateien zur Verfügung stellt finden Ihr die Abfallkalender nach Bezirken 1 - 6 sortiert.
+Da die Stadt Geilenkirchen im Kreis Heinsberg leider keine ICS Kalenderdateien zur Verfügung stellt, habe ich mir mal die mühe gemacht, die ICS Dateien für jeden einzelnen Bezirk zu erstellen.
 
-Diese sind z.B. mit dem "Waste Collection Schedule" für HomeAssistant kompatibel.
+Hier findet Ihr die Abfallkalender nach Bezirken 1 - 6 sortiert, siehe Dateinamen.
+
+
+### Integration in HomeAssistant mit "Waste Collection Schedule"
+
+Die ICS Dateien sind mit dem "Waste Collection Schedule" für HomeAssistant kompatibel.
 
 configuration.yaml
-''' yaml
+``` yaml
+sensor: !include sensors.yaml
+
+
 waste_collection_schedule:
   sources:
     - name: ics
@@ -28,11 +36,11 @@ waste_collection_schedule:
           
   fetch_time: "01:00"
   day_switch_time: "23:00"
-'''
+```
 
 sensor.yaml
-'''
-# Abfall
+``` yaml
+  # Abfall
   - platform: waste_collection_schedule
     name: Abfuhr Restmuell
     details_format: "upcoming"
@@ -61,5 +69,6 @@ sensor.yaml
     types:
       - bio
 
-'''
+```
 
+![Alt text](image.png)
