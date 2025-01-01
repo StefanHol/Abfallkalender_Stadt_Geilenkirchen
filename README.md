@@ -5,7 +5,7 @@ Da die Stadt Geilenkirchen im Kreis Heinsberg leider keine ICS Kalenderdateien z
 Hier findet Ihr die Abfallkalender nach Bezirken 1 - 6 sortiert, siehe Dateinamen.
 
 ## Gültigkeit:
-````Kalenderjahr 2024````
+````Kalenderjahr 2025````
 
 
 ### Integration in HomeAssistant mit "Waste Collection Schedule"
